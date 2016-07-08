@@ -19,25 +19,33 @@ opt1.addEventListener("click", function() {character.fighter = 'Warrior'},false)
 
 var addAgility = document.getElementById("addagility");
 var subtractAgility = document.getElementById("subtractagility");
-var addIntelligence = document.getElementById("addIntelligence");
-var subtractIntelligence = document.getElementById("subtractIntelligence");
-var addStrength = document.getElementById("addStrength");
-var subtractStrength = document.getElementById("subtract");
+var addIntelligence = document.getElementById("addintelligence");
+var subtractIntelligence = document.getElementById("subtractintelligence");
+var addStrength = document.getElementById("addstrength");
+var subtractStrength = document.getElementById("subtractstrength");
+
 var agilityNumber = parseInt(document.getElementById("agility-number").innerHTML);
 var agilityString = document.getElementById("agility-number");
+
 var intelligenceNumber = parseInt(document.getElementById("intelligence-number").innerHTML);
+var intelligenceString = document.getElementById("intelligence-number");
+
 var strengthNumber = parseInt(document.getElementById("strength-number").innerHTML);
-//var totalNumber = 0
+var strengthString = document.getElementById("strength-number");
 
-//function checkTotal(){
-//    totalNumber = agilityNumber + intelligenceNumber + strengthNumber;
-//    if(totalNumber > 15){
-//        
-//    }
-//}
+var totalNumber = 0
 
-addAgility.addEventListener("click", function() {agilityNumber = agilityNumber + 1; agilityString.innerHTML = String(agilityNumber); console.log(agilityNumber);},false);
+addAgility.addEventListener("click", function() {agilityNumber = agilityNumber + 1; agilityString.innerHTML = String(agilityNumber);},false);
 
+subtractAgility.addEventListener("click", function() {agilityNumber = agilityNumber - 1; agilityString.innerHTML = String(agilityNumber);},false);
+
+addIntelligence.addEventListener("click", function() {intelligenceNumber = intelligenceNumber + 1; intelligenceString.innerHTML = String(intelligenceNumber);},false);
+
+subtractIntelligence.addEventListener("click", function() {intelligenceNumber = intelligenceNumber - 1; intelligenceString.innerHTML = String(intelligenceNumber);},false);
+
+addStrength.addEventListener("click", function() {strengthNumber = strengthNumber + 1; strengthString.innerHTML = String(strengthNumber);},false);
+
+subtractStrength.addEventListener("click", function() {strengthNumber = strengthNumber - 1; strengthString.innerHTML = String(strengthNumber);},false);
 
 
 
