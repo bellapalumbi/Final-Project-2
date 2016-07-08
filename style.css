@@ -1,0 +1,24 @@
+#toptext, .info {
+    text-align: center;
+}
+
+.info {
+    color: #800000;
+}
+
+#container, #container2 {
+    display: flex;
+}
+
+#container {
+    padding-bottom: 20px;
+}
+
+.minicontainer {
+    flex-grow: 1;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 50px;
+}
+
