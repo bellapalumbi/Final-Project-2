@@ -19,6 +19,29 @@ opt1.addEventListener("click", function() {character.fighter = 'Warrior'},false)
 
 var addAgility = document.getElementById("addagility");
 var subtractAgility = document.getElementById("subtractagility");
+var addIntelligence = document.getElementById("addIntelligence");
+var subtractIntelligence = document.getElementById("subtractIntelligence");
+var addStrength = document.getElementById("addStrength");
+var subtractStrength = document.getElementById("subtract");
+var agilityNumber = parseInt(document.getElementById("agility-number").innerHTML);
+var agilityString = document.getElementById("agility-number");
+var intelligenceNumber = parseInt(document.getElementById("intelligence-number").innerHTML);
+var strengthNumber = parseInt(document.getElementById("strength-number").innerHTML);
+//var totalNumber = 0
+
+//function checkTotal(){
+//    totalNumber = agilityNumber + intelligenceNumber + strengthNumber;
+//    if(totalNumber > 15){
+//        
+//    }
+//}
+
+addAgility.addEventListener("click", function() {agilityNumber = agilityNumber + 1; agilityString.innerHTML = String(agilityNumber); console.log(agilityNumber);},false);
+
+
+
+
+
 
 
                       
