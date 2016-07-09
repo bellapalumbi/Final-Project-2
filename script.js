@@ -9,13 +9,20 @@ var opt1 = document.getElementById("opt1");
 var opt2 = document.getElementById("opt2");
 var opt3 = document.getElementById("opt3");
 
+
 opt1.style.backgroundColor = 'darkorchid';
 opt2.style.backgroundColor = 'cornflowerblue';
 opt3.style.backgroundColor = 'chartreuse';
 
-opt1.addEventListener("click", function() {character.fighter = 'Archer'},false);
-opt1.addEventListener("click", function() {character.fighter = 'Mage'},false);
-opt1.addEventListener("click", function() {character.fighter = 'Warrior'},false);
+var fighterChosen = false;
+
+opt1.addEventListener("click", function() {if(fighterChosen == true){return;} character.fighter = 'Archer'; opt1.style.borderColor = 'yellow'; fighterChosen = true;},false);
+opt2.addEventListener("click", function() {if(fighterChosen == true){return;} character.fighter = 'Mage'; opt2.style.borderColor = 'yellow'; fighterChosen = true;},false);
+opt3.addEventListener("click", function() {if(fighterChosen == true){return;} character.fighter = 'Warrior'; opt3.style.borderColor = 'yellow'; fighterChosen = true;},false);
+
+var pointsLeft = parseInt(document.getElementById("numberLeft").innerHTML);
+var pointsLeftString = document.getElementById("numberLeft");
+
 
 var addAgility = document.getElementById("addagility");
 var subtractAgility = document.getElementById("subtractagility");
@@ -36,9 +43,10 @@ var strengthString = document.getElementById("strength-number");
 var totalNumber = agilityNumber + intelligenceNumber + strengthNumber;
 
 function changeTotal() {
-    //console.log("changeTotal has been called");
     totalNumber = agilityNumber + intelligenceNumber + strengthNumber;
-    //console.log(totalNumber);
+    pointsLeft = 15 - totalNumber;
+    console.log(pointsLeft);
+    pointsLeftString.innerHTML = String(pointsLeft);
 }
 
 addAgility.addEventListener("click", function() {if(totalNumber == 15) {return;} agilityNumber = agilityNumber + 1; agilityString.innerHTML = String(agilityNumber);changeTotal();},false);

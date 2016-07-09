@@ -11,12 +11,13 @@
 }
 
 #container {
-    padding-bottom: 20px;
+    
+    border: 5px solid black;
 }
 
 .minicontainer {
     flex-grow: 1;
-    border: 1px solid black;
+    border: 3px solid black;
     text-align: center;
     font-size: 30px;
     padding-bottom: 50px;
